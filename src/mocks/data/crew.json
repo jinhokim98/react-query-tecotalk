@@ -2,41 +2,57 @@
   {
     "nickname": "쿠키",
     "name": "김진호",
-    "stack": "frontend"
+    "stack": "frontend",
+    "like": 3,
+    "likeStatus": false
   },
   {
     "nickname": "토다리",
     "name": "이태훈",
-    "stack": "frontend"
+    "stack": "frontend",
+    "like": 3,
+    "likeStatus": true
   },
   {
     "nickname": "썬데이",
     "name": "김유선",
-    "stack": "frontend"
+    "stack": "frontend",
+    "like": 3,
+    "likeStatus": false
   },
   {
     "nickname": "파슬리",
     "name": "김윤아",
-    "stack": "frontend"
+    "stack": "frontend",
+    "like": 3,
+    "likeStatus": false
   },
   {
     "nickname": "올리",
     "name": "이예진",
-    "stack": "frontend"
+    "stack": "frontend",
+    "like": 3,
+    "likeStatus": true
   },
   {
     "nickname": "프룬",
-    "name": "변민짚",
-    "stack": "frontend"
+    "name": "변민지",
+    "stack": "frontend",
+    "like": 3,
+    "likeStatus": false
   },
   {
     "nickname": "쑤쑤",
     "name": "현수연",
-    "stack": "frontend"
+    "stack": "frontend",
+    "like": 3,
+    "likeStatus": true
   },
   {
     "nickname": "지니",
     "name": "손진영",
-    "stack": "frontend"
+    "stack": "frontend",
+    "like": 3,
+    "likeStatus": false
   }
 ]

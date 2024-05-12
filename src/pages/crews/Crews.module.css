@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.title {
+  font-size: 25px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list li {
+  display: flex;
+  border: 1px solid black;
+  width: 700px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.list li div {
+  width: 150px;
+  margin-right: 50px;
+}

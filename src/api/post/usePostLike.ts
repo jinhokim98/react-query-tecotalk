@@ -5,7 +5,7 @@ interface PostLike {
   isLike: boolean;
 }
 
-function usePostLike() {
+function usePostLike(nickname: string) {
   const postLike = async (body: PostLike) => {
     const response = await request<PostLike, PostLike, null>({
       uri: '/api/crew/like',
@@ -23,7 +23,7 @@ function usePostLike() {
     mutationFn: postLike,
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: ['/api/crew'],
+        queryKey: ['get-crew-detail', nickname],
       });
     },
   });

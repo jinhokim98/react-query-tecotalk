@@ -1,13 +1,13 @@
-import usePostLike from '../api/post/usePostLike';
-import { Crew } from '../types/Crew';
 import styles from './CrewDetail.module.css';
+import useGetCrew from '../../api/get/useGetCrew';
+import { useParams } from 'react-router-dom';
+import usePostLike from '../../api/post/usePostLike';
 
-interface CrewProps {
-  crew: Crew;
-}
+function CrewDetail() {
+  const { nickname } = useParams();
+  const { crew } = useGetCrew(nickname ?? '');
 
-function CrewDetail({ crew }: CrewProps) {
-  const { requestLike } = usePostLike();
+  const { requestLike } = usePostLike(nickname ?? '');
   const likeButtonLabel = crew.likeStatus ? '😊' : '😥';
 
   const body = {
@@ -15,7 +15,7 @@ function CrewDetail({ crew }: CrewProps) {
   };
 
   return (
-    <li>
+    <div>
       <div>닉네임 : {crew.nickname}</div>
       <div>이름 : {crew.name}</div>
       <div>분야: {crew.stack}</div>
@@ -25,7 +25,7 @@ function CrewDetail({ crew }: CrewProps) {
         </button>
         <div>{crew.like}</div>
       </div>
-    </li>
+    </div>
   );
 }
 

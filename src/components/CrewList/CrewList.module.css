@@ -1,0 +1,9 @@
+.list {
+  text-decoration: none;
+  color: black;
+}
+
+.list:hover {
+  background-color: beige;
+  cursor: pointer;
+}

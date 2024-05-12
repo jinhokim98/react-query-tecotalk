@@ -41,14 +41,23 @@ const worker = setupWorker(...handlers);
 export default worker;
 ```
 
-그리고 index.tsx에가서 아래 코드를 추가해주면 됩니다.
+그리고 index.tsx에가서 아래 코드를 추가해주면 되는데 주의할 점이 하나 있습니다. worker의 start 메서드가 불릴 때까지 기다렸다가 프로그램이 실행되어야 msw가 정상적으로 작동할 수 있습니다.
+따라서 main.tsx를 이렇게 작성해주시면 됩니다.
 
-```ts
-import worker from './mocks/browser';
+```tsx
+import worker from './mocks/browser.ts';
 
-if (import.meta.env.DEV) {
-  worker.start();
+async function deferRender() {
+  if (import.meta.env.DEV) return await worker.start();
 }
+
+deferRender().then(() => {
+  ReactDOM.createRoot(document.getElementById('root')!).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+  );
+});
 ```
 
 

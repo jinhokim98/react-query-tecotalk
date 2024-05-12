@@ -15,15 +15,17 @@ const queryClient = new QueryClient({
   },
 });
 
-if (import.meta.env.DEV) {
-  worker.start();
+async function deferRender() {
+  if (import.meta.env.DEV) return await worker.start();
 }
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
-      <ReactQueryDevtools initialIsOpen />
-    </QueryClientProvider>
-  </React.StrictMode>,
-);
+deferRender().then(() => {
+  ReactDOM.createRoot(document.getElementById('root')!).render(
+    <React.StrictMode>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+        <ReactQueryDevtools initialIsOpen />
+      </QueryClientProvider>
+    </React.StrictMode>,
+  );
+});

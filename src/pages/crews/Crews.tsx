@@ -7,7 +7,7 @@ function Crews() {
 
   return (
     <section className={styles.container}>
-      <h1 className={styles.title}>안녕 육칠이들</h1>
+      <h1 className={styles.title}>안녕 프엔</h1>
       <ul className={styles.list}>
         {crews !== undefined && crews.map((crew, index) => <CrewList key={index} crew={crew} />)}
       </ul>

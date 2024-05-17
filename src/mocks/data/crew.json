@@ -1,7 +1,7 @@
 [
   {
     "nickname": "쿠키",
-    "name": "김진호",
+    "name": "쿠",
     "stack": "frontend",
     "like": 3,
     "likeStatus": false
@@ -23,34 +23,34 @@
   {
     "nickname": "해리",
     "name": "웅",
-    "stack": "backend",
+    "stack": "frontend",
     "like": 3,
     "likeStatus": false
   },
   {
     "nickname": "켈리",
     "name": "욱",
-    "stack": "frontend",
+    "stack": "backend",
     "like": 3,
     "likeStatus": true
   },
   {
-    "nickname": "버건디",
-    "name": "전태헌",
+    "nickname": "파슬리",
+    "name": "폭파",
     "stack": "frontend",
     "like": 3,
     "likeStatus": false
   },
   {
     "nickname": "썬데이",
-    "name": "김유선",
+    "name": "작강썬",
     "stack": "frontend",
     "like": 3,
     "likeStatus": true
   },
   {
-    "nickname": "해시",
-    "name": "김가연",
+    "nickname": "소파",
+    "name": "HBD",
     "stack": "frontend",
     "like": 3,
     "likeStatus": false
